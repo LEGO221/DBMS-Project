@@ -31,7 +31,7 @@ function ValInputName {
 #-------------------------------Main Menu Functions----------------------------------
 
 function CreateDB {
-	mkdir DataBases
+	
     	
 	typeset DBName
 
@@ -56,7 +56,7 @@ function CreateDB {
 }
 
 function ListDB {
-	if [ -n "$(ls DataBases/)" ]
+	if [ -n "$(ls DataBases)" ]
 	then
 		echo "DataBases : "
 		ls DataBases/
@@ -72,7 +72,7 @@ function ConnectDB {
 
 	typeset DBName
 
-	if [ -z "$(ls DataBases/ )" ]
+	if [ -z "$(ls DataBases)" ]
 	then
 		echo "No DataBases found to connect"
 	fi
@@ -105,7 +105,7 @@ function DropDB {
 
 	typeset DBName
 
-	if [ -z "$(ls DataBases/)" ]
+	if [ -z "$(ls DataBases)" ]
 	then 
 		echo "No DataBases found"
 	fi
